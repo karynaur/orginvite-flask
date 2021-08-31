@@ -16,7 +16,7 @@ api = GhApi(owner, token)
 def send_invite(user_email):
     
     try:
-        api.orgs.
+        
         api.orgs.create_invitation(organization, email = user_email)
         return True
     except:
