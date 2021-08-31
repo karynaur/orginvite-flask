@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Github invite</title>
+<<<<<<< HEAD
 
 </head>
 
@@ -19,6 +20,37 @@
         <button type="submit">Login</button>
 
     </form>
+=======
+    <link rel="stylesheet" href="../static/styles/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <h2>Github IIIT <span>Kottayam invite</span></h2>
+            <form action="{{url_for('get_details')}}" method="POST">
+                <label for="username">Github Username:</label>
+                <input type="text" name="username" id="username" placeholder="Github username">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Email">
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <div class="right">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="/agents"><span>Agents</span></a></li>
+                    <li><a href="/insights"><span>Insights</span></a></li>
+                    <li><button class="btn">Log In</button></li>
+                </ul>
+            </nav>
+            <div class="text">
+                <h2>Welcome to Dhruva</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis architecto aut illum nihil voluptas? Obcaecati aperiam delectus deleniti. Voluptatem laborum dignissimos tenetur consequuntur et eaque earum unde. Officia, dolores similique?</p>
+            </div>
+        </div>
+    </div>
+>>>>>>> a5ec10f (frontend login page)
 </body>
 
 </html>
