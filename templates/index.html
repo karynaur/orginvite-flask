@@ -17,9 +17,15 @@
                 <label for="username">Github Username:</label>
                 <input type="text" name="username" id="username" placeholder="Github username"><br>
                 <label for="email">Email:</label>
-                <input type="email" name="email" id="email" placeholder="Email"><br>
-                <button type="submit">Login</button>
+
+                <input type="email" name="email" id="email" placeholder="Email">
+                <button type="submit">Login</button> {% if message %}
+                <p type="text"><strong>Status</strong>: {{message}}</p>
+                {% endif %} {% if error %}
+                <p type="text"><strong>Error</strong>: {{error}}</p>
+                {% endif %}
             </form>
+
         </div>
         <div class="right">            
             <div class="text">

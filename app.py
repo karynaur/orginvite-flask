@@ -1,27 +1,25 @@
 from flask import Flask, request, render_template 
 from ghapi.all import GhApi
-import yaml
+import os
 
-with open('./github.cfg','r') as f:
-    cfg = yaml.full_load(f.read())
+token = os.environ['TOKEN']
+owner = os.environ['OWNER']
+organization = os.environ['ORG']
 
-"""
-cfg: 
-    owner: String `name`
-    token: String `token`
-    organization: String `name`
-"""
 
 app = Flask(__name__)   
-api = GhApi(owner = cfg['owner'], token = cfg['token'])
+api = GhApi(owner, token)
+
+
 # Helper funtions
 
 def send_invite(user_email):
     
     try:
-        api.orgs.create_invitation(cfg['organization'], email = user_email)
+        api.orgs.
+        api.orgs.create_invitation(organization, email = user_email)
         return True
-    except e:
+    except:
         return False
 
 def check_user(username):
@@ -37,11 +35,16 @@ def get_details():
     if request.method == "POST":
         username = request.form.get("username")
         email = request.form.get("email") 
-        if check_user:
+        if check_user(username):
             if send_invite(email):
-            return "Success"
-            else: return "invite not sent"
-        else: return "User does not exist"
+                message = f"Invitation sent to {email}!"
+                return render_template("index.html", message = message)
+            else: 
+                error = "Invitation failed! Email does not exist" 
+                return render_template("index.html", error = error)
+        else: 
+            error = "Could not find user"
+            return render_template("index.html", error = error)
     return render_template("index.html")
   
 if __name__=='__main__':
