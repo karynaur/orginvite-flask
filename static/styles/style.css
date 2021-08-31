@@ -12,10 +12,19 @@
 }
 
 .left{
+    width: 50%;
     background-color: white;
     height: 100vh;
-    width: 40vw;
+    width: 50vw;
+    
 }
+
+#head{
+  margin-top: 60px;  
+  margin-left: 70px;
+  font-size: 35px;
+}
+
 .left span{
     color: rgb(30, 170, 252);
 }
@@ -31,7 +40,7 @@
 }
 .left input[type=text], input[type=email]{
     width: 100%;
-    padding: 12px 20px;
+    padding: 12px 30px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
@@ -42,7 +51,7 @@
     width: 100%;
     background-color: #1f7ce7;
     color: white;
-    padding: 14px 20px;
+    padding: 14px 30px;
     margin: 8px 0;
     border: none;
     border-radius: 4px;
@@ -56,51 +65,11 @@
     height: 100vh;
     width: 60vw;
 }
-.navbar{
-    display: inline-block;
-    width: 20rem;
-    right: 3px;
-    color: white;
-    height: 2rem;
-    position: absolute;
-    padding: 3px 3px;
-}
-.navbar ul{
-    padding-top: 3px;
-    right: 3%;
-    display: flex;
-    list-style: none;
-}
-.navbar ul li{
-    padding: 3px 5px;
-    margin: 3px 5px;
-}
-.navbar ul li a{
-    color: white;
-    padding: 13px 5px 0px;
-    margin: 8px 5px 0px;
-    text-decoration: none;
-    font-size: 1.1rem;
-}
-.btn{
-    padding: 3px;
-    color: white;
-    background: transparent;
-    border: 2px solid white;
-    border-radius: 3px;
-    margin: 3px;
-    padding: 3px 5px;
-}
-.btn:hover{
-    background-color: white;
-    color: rgb(12, 12, 94);
-    transition: 0.3s;
-}
+
 .text{
     color: white;
     padding: 3px 5px;
-    width: 40%;
-    top: 30%;
+    width: 40%;    
     right: 10%;
     position: absolute;
     display: inline-block;
