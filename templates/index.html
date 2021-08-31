@@ -12,25 +12,18 @@
 <body>
     <div class="container">
         <div class="left">
-            <h2>Github IIIT <span>Kottayam invite</span></h2>
+            <h2 id='head'>Github IIIT <span>Kottayam invite</span></h2>
             <form action="{{url_for('get_details')}}" method="POST">
                 <label for="username">Github Username:</label>
-                <input type="text" name="username" id="username" placeholder="Github username">
+                <input type="text" name="username" id="username" placeholder="Github username"><br>
                 <label for="email">Email:</label>
-                <input type="email" name="email" id="email" placeholder="Email">
+                <input type="email" name="email" id="email" placeholder="Email"><br>
                 <button type="submit">Login</button>
             </form>
         </div>
-        <div class="right">
-            <nav class="navbar">
-                <ul>
-                    <li><a href="/agents"><span>Agents</span></a></li>
-                    <li><a href="/insights"><span>Insights</span></a></li>
-                    <li><button class="btn">Log In</button></li>
-                </ul>
-            </nav>
+        <div class="right">            
             <div class="text">
-                <h2>Welcome to Dhruva</h2>
+                <h2 id='head'>Welcome to Dhruva</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis architecto aut illum nihil voluptas? Obcaecati aperiam delectus deleniti. Voluptatem laborum dignissimos tenetur consequuntur et eaque earum unde. Officia, dolores similique?</p>
             </div>
         </div>
